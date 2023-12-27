@@ -1,0 +1,7 @@
+Flask==3.0.0  # Adjust the version number as needed
+werkzeug==3.0.1
+gunicorn==20.1.0
+google-cloud-aiplatform==1.38.1  # This is the client library for Vertex AI
+Flask-SQLAlchemy==2.5.1
+vertexai==0.0.1
+python-dotenv==1.0.0

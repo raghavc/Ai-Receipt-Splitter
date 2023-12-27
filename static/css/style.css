@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Temporarily set to positive to test visibility */
+  top: 0;
+  left: 0;
+  background-color: #f7efd2; /* For testing, remove if particles are visible */
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #eed7a1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2; /* Ensure this is above the particles */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+input[type="text"],
+input[type="file"] {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #449d44;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+/* Submit Button Styles */
+#submitBtn {
+  padding: 10px 20px;
+  background-color: red; /* Default color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+  background-color: darkred;
+}
+
+/* Loading Spinner Styles */
+#loadingSpinner {
+  display: none; /* Hidden by default */
+  position: fixed; /* Or absolute, depending on your layout */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      margin: 50px auto; /* Adjusted for smaller screens */
+  }
+}
+
+.person-bill {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.person-bill h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.person-bill p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.person-bill strong {
+  color: #000;
+  font-weight: bold;
+}
+
+.file-upload-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.file-upload-button {
+  border: 2px solid #5cb85c; /* Same as the submit button */
+  color: white; /* Same as the submit button */
+  background-color: #5cb85c; /* Same as the submit button */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.file-upload-button:hover {
+  background-color: #449d44; /* Darker green for hover, same as the submit button */
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+

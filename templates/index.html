@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Splitter</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>console.log("Particles.js loaded");</script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>Receipt Splitter</h1>
+        <form id="uploadForm" action="/submit" method="post" enctype="multipart/form-data">
+            <div id="loadingSpinner" style="display:none;">
+                <img src="/static/images/Loading-Circle-64x64.gif" alt="Loading..." />
+            </div>
+            <div class="file-upload-wrapper">
+                <label for="imageInput" class="file-upload-button">Choose File</label>
+                <input type="file" id="imageInput" name="image" required>
+            </div>
+            <div>
+                <label for="textInput">Enter Prompt:</label>
+                <input type="text" id="textInput" name="text" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result" style="display:none;"> <!-- This div will show the result -->
+            <h2>Result:</h2>
+            <p id="resultContent"></p> <!-- Content will be updated here -->
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+
+    <div id="response"></div> <!-- Response area -->
+
+</body>
+</html>
